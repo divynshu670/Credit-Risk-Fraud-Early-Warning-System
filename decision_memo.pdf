@@ -1,0 +1,28 @@
+# Decision Memo: Credit Risk & Fraud Strategy
+
+## Problem
+UPI-based credit products face increasing credit defaults and fraud risk
+as transaction volume grows.
+
+## Key Insights
+- Risk segmentation clearly separates users by behavioral and repayment patterns
+- High-risk users contribute disproportionately to defaults
+- Night-time usage and repayment delays are strong early risk signals
+
+## Recommendation
+- Restrict or manually review High-risk users
+- Apply transaction velocity limits for Medium-risk users
+- Maintain standard approvals for Low-risk users
+
+## Expected Impact
+- Meaningful reduction in defaults based on simulated policy actions
+- Limited impact on overall approval rates
+
+## Risks & Trade-offs
+- False positives may affect user experience
+- Thresholds require calibration over time
+
+## Next Steps
+- Validate with live production data
+- Introduce real-time monitoring
+- Add feedback loop for rule refinement
